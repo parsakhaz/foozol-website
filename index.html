@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>foozol - Terminal-First AI Session Manager</title>
+  <meta name="description" content="Manage multiple AI coding sessions with git worktrees. Run Claude Code and Codex in parallel.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --fg: #fafafa;
+      --muted: #a1a1aa;
+      --border: #27272a;
+      --accent: #3b82f6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg);
+      color: var(--fg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3rem;
+      font-size: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .tagline {
+      font-size: 1.125rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      line-height: 1.7;
+    }
+
+    .features {
+      margin-bottom: 3rem;
+    }
+
+    .feature {
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .feature-title {
+      color: var(--fg);
+      font-weight: 500;
+    }
+
+    .feature-desc {
+      color: var(--muted);
+    }
+
+    .cta {
+      margin-bottom: 3rem;
+    }
+
+    .cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--fg);
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .cta a:hover {
+      background: var(--fg);
+      color: var(--bg);
+      border-color: var(--fg);
+    }
+
+    .links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .links a:hover {
+      color: var(--fg);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--fg);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 3rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      .tagline {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo">f</div>
+
+    <h1>foozol</h1>
+
+    <p class="tagline">
+      Terminal-first AI session manager. Run multiple Claude Code and Codex instances
+      in parallel using git worktrees. Built for developers who want to explore
+      different approaches simultaneously.
+    </p>
+
+    <div class="features">
+      <div class="feature">
+        <span class="feature-title">Parallel sessions.</span>
+        <span class="feature-desc"> Run multiple AI assistants on the same codebase without conflicts.</span>
+      </div>
+      <div class="feature">
+        <span class="feature-title">Git worktrees.</span>
+        <span class="feature-desc"> Each session gets its own isolated branch. Merge the best solution.</span>
+      </div>
+      <div class="feature">
+        <span class="feature-title">Visual diff.</span>
+        <span class="feature-desc"> See exactly what each AI changed. Compare approaches side by side.</span>
+      </div>
+      <div class="feature">
+        <span class="feature-title">Windows native.</span>
+        <span class="feature-desc"> First-class Windows support with ARM64 builds.</span>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a href="https://github.com/parsakhaz/foozol/releases">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download
+      </a>
+    </div>
+
+    <div class="links">
+      <a href="https://github.com/parsakhaz/foozol">GitHub</a>
+      <a href="https://github.com/parsakhaz/foozol#readme">Documentation</a>
+      <a href="mailto:hello@foozol.com">Contact</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>By <a href="https://dcouple.ai">Dcouple Inc</a></p>
+  </footer>
+</body>
+</html>
