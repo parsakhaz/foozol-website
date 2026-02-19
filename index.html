@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>foozol - Terminal-First AI Session Manager</title>
-  <meta name="description" content="Manage multiple AI coding sessions with git worktrees. Run Claude Code and Codex in parallel.">
+  <title>foozol</title>
+  <meta name="description" content="Terminal-first AI session manager. Run multiple Claude Code and Codex instances in parallel using git worktrees.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,7 +14,6 @@
       --fg: #fafafa;
       --muted: #a1a1aa;
       --border: #27272a;
-      --accent: #3b82f6;
     }
 
     * {
@@ -40,108 +39,70 @@
     }
 
     .logo {
-      width: 48px;
-      height: 48px;
+      width: 40px;
+      height: 40px;
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 3rem;
-      font-size: 1.5rem;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
-    }
-
-    .tagline {
-      font-size: 1.125rem;
-      color: var(--muted);
-      margin-bottom: 3rem;
-      line-height: 1.7;
-    }
-
-    .features {
-      margin-bottom: 3rem;
-    }
-
-    .feature {
-      margin-bottom: 1.5rem;
-      line-height: 1.7;
-    }
-
-    .feature-title {
-      color: var(--fg);
+      font-size: 1.25rem;
       font-weight: 500;
     }
 
-    .feature-desc {
-      color: var(--muted);
+    p {
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
     }
 
-    .cta {
-      margin-bottom: 3rem;
-    }
-
-    .cta a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+    .intro {
       color: var(--fg);
-      text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      transition: all 0.2s;
     }
 
-    .cta a:hover {
-      background: var(--fg);
-      color: var(--bg);
-      border-color: var(--fg);
-    }
-
-    .links {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .links a {
+    .desc {
       color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
     }
 
-    .links a:hover {
+    a {
       color: var(--fg);
       text-decoration: underline;
       text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+    }
+
+    a:hover {
+      color: var(--muted);
+    }
+
+    .links {
+      margin-top: 2rem;
+      color: var(--muted);
     }
 
     footer {
       border-top: 1px solid var(--border);
       padding: 2rem;
-      text-align: center;
-    }
-
-    footer p {
+      max-width: 48rem;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
       color: var(--muted);
       font-size: 0.875rem;
     }
 
     footer a {
       color: var(--muted);
-      text-decoration: none;
     }
 
     footer a:hover {
       color: var(--fg);
-      text-decoration: underline;
-      text-underline-offset: 4px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
     }
 
     @media (max-width: 640px) {
@@ -149,12 +110,14 @@
         padding: 3rem 1.5rem;
       }
 
-      h1 {
-        font-size: 1.25rem;
+      footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
       }
 
-      .tagline {
-        font-size: 1rem;
+      .footer-links {
+        justify-content: center;
       }
     }
   </style>
@@ -163,53 +126,30 @@
   <main>
     <div class="logo">f</div>
 
-    <h1>foozol</h1>
+    <p class="intro">hi! this is foozol.</p>
 
-    <p class="tagline">
-      Terminal-first AI session manager. Run multiple Claude Code and Codex instances
-      in parallel using git worktrees. Built for developers who want to explore
-      different approaches simultaneously.
+    <p class="desc">
+      we build tools for developers who use ai to write code. foozol lets you run multiple
+      <a href="https://docs.anthropic.com/en/docs/claude-code">claude code</a> or
+      <a href="https://github.com/openai/codex">codex</a> sessions in parallel using git worktrees.
+      each ai gets its own isolated branch. merge the best solution.
     </p>
 
-    <div class="features">
-      <div class="feature">
-        <span class="feature-title">Parallel sessions.</span>
-        <span class="feature-desc"> Run multiple AI assistants on the same codebase without conflicts.</span>
-      </div>
-      <div class="feature">
-        <span class="feature-title">Git worktrees.</span>
-        <span class="feature-desc"> Each session gets its own isolated branch. Merge the best solution.</span>
-      </div>
-      <div class="feature">
-        <span class="feature-title">Visual diff.</span>
-        <span class="feature-desc"> See exactly what each AI changed. Compare approaches side by side.</span>
-      </div>
-      <div class="feature">
-        <span class="feature-title">Windows native.</span>
-        <span class="feature-desc"> First-class Windows support with ARM64 builds.</span>
-      </div>
-    </div>
+    <p class="desc">
+      terminal-first. windows native. built for exploring different approaches simultaneously.
+    </p>
 
-    <div class="cta">
-      <a href="https://github.com/parsakhaz/foozol/releases">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
-        </svg>
-        Download
-      </a>
-    </div>
-
-    <div class="links">
-      <a href="https://github.com/parsakhaz/foozol">GitHub</a>
-      <a href="https://github.com/parsakhaz/foozol#readme">Documentation</a>
-      <a href="mailto:hello@foozol.com">Contact</a>
-    </div>
+    <p class="links">
+      download foozol from <a href="https://github.com/parsakhaz/foozol/releases">github</a>,
+      or reach out at <a href="mailto:hello@foozol.com">hello@foozol.com</a>.
+    </p>
   </main>
 
   <footer>
-    <p>By <a href="https://dcouple.ai">Dcouple Inc</a></p>
+    <span>by <a href="https://dcouple.ai">dcouple</a></span>
+    <div class="footer-links">
+      <a href="https://github.com/parsakhaz/foozol">github</a>
+    </div>
   </footer>
 </body>
 </html>
